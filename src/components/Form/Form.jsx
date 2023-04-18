@@ -9,14 +9,15 @@ export function Form(props) {
         email: ""
       }
     );
-  
-    const handleSubmit = evt => {
-      evt.preventDefault();
+
+    const handleSubmit = e => {
+      e.preventDefault();
+      console.log(formInput);
     };
   
-    const handleInput = evt => {
-      const name = evt.target.name;
-      const newValue = evt.target.value;
+    const handleInput = e => {
+      const name = e.target.name;
+      const newValue = e.target.value;
       setFormInput({ [name]: newValue });
     };
   
@@ -50,7 +51,7 @@ export function Form(props) {
               variant="contained"
               color="primary"
             >
-              Subscribe
+              Log In
             </Button>
           </form>
         </Paper>
